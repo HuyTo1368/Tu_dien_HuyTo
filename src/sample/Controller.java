@@ -272,4 +272,8 @@ public class Controller extends DictionaryManagement{
         }
         TextFields.bindAutoCompletion(tu, words);
     } // Ham tu goi y.
+
+    public void audio(ActionEvent event) {
+        Audio.speech(tu.getText());
+    } // Ham phat am.
 }
