@@ -20,7 +20,7 @@
       <Button layoutX="207.0" layoutY="193.0" mnemonicParsing="false" onAction="#addWord" prefHeight="35.0" prefWidth="96.0" text="Thêm" />
       <Button layoutX="339.0" layoutY="193.0" mnemonicParsing="false" onAction="#DeleteWord" prefHeight="35.0" prefWidth="96.0" text="Xóa" />
       <Button layoutX="466.0" layoutY="193.0" mnemonicParsing="false" onAction="#EditWord" prefHeight="35.0" prefWidth="96.0" text="Sửa" />
-      <TextField fx:id="tu" alignment="CENTER" layoutX="207.0" layoutY="105.0" prefHeight="54.0" prefWidth="286.0" style="-fx-background-color: white;">
+      <TextField fx:id="tu" layoutX="207.0" layoutY="105.0" onKeyPressed="#suggestWord" prefHeight="54.0" prefWidth="286.0" style="-fx-background-color: white;">
          <font>
             <Font size="25.0" />
          </font></TextField>

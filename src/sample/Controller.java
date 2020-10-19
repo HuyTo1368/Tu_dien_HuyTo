@@ -12,6 +12,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.util.Pair;
 
+import org.controlsfx.control.textfield.AutoCompletionBinding;
+import org.controlsfx.control.textfield.TextFields;
+
 import java.awt.*;
 import java.io.*;
 import java.net.URL;
@@ -51,7 +54,7 @@ public class Controller extends DictionaryManagement{
             }
         }
         tu1.setText(wordEplain);
-    }
+    } // Ham tra tu
 
     public void EditWord(ActionEvent event) {
         javafx.scene.control.Dialog<ButtonType> dialog = new javafx.scene.control.Dialog<>();
@@ -135,7 +138,7 @@ public class Controller extends DictionaryManagement{
                 }
             }
         });
-    }
+    } // Ham sua tu
 
     public void DeleteWord(ActionEvent event) {
         int check = 0;
@@ -183,8 +186,7 @@ public class Controller extends DictionaryManagement{
                 alert.showAndWait();
             }
         }
-    }
-
+    } // Ham xoa tu
 
     public void addWord(ActionEvent event) {
         javafx.scene.control.Dialog<ButtonType> dialog = new javafx.scene.control.Dialog<>();
@@ -258,5 +260,16 @@ public class Controller extends DictionaryManagement{
                 alert.showAndWait();
             }
         });
-    }
+    } // Ham them tu
+
+    public void suggestWord() {
+        ArrayList<String> words = new ArrayList<String>();
+        String charSuggest = tu.getText();
+        for (int i = 0; i < tudien.size(); i++) {
+            if(tudien.get(i).getWord_target().indexOf(charSuggest) >= 0) {
+                words.add(tudien.get(i).getWord_target());
+            }
+        }
+        TextFields.bindAutoCompletion(tu, words);
+    } // Ham tu goi y.
 }
