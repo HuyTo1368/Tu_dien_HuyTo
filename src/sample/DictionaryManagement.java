@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class DictionaryManagement extends Dictionary{
     public ArrayList<Word> insertFromCommandline() throws IOException {
-        Scanner scanner = new Scanner(Paths.get("D:\\Tudien JAVAFX\\tudien.txt"), "UTF-8");
+        Scanner scanner = new Scanner(Paths.get("D:\\Tu_dien_HuyTo\\tudien.txt"), "UTF-8");
         while (scanner.hasNextLine()) {
             String string = scanner.nextLine();
             String[] s = string.split("\\t");

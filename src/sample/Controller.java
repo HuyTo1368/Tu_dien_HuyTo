@@ -104,7 +104,7 @@ public class Controller extends DictionaryManagement{
                         tudien.get(i).setWord_explain(wordEplain);
 
                         try {
-                            FileWriter fileWriter = new FileWriter("D:\\Tudien JAVAFX\\tudien.txt");
+                            FileWriter fileWriter = new FileWriter("D:\\Tu_dien_HuyTo\\tudien.txt");
                             for (int j = 0; j<tudien.size(); j++) {
                                 String word = tudien.get(j).getWord_target() + "\t"
                                         + tudien.get(j).getWord_type() + "\t"
@@ -153,7 +153,7 @@ public class Controller extends DictionaryManagement{
                     check = 1;
 
                     try {
-                        FileWriter fileWriter = new FileWriter("D:\\Tudien JAVAFX\\tudien.txt");
+                        FileWriter fileWriter = new FileWriter("D:\\Tu_dien_HuyTo\\tudien.txt");
                         for (int j = 0; j<tudien.size(); j++) {
                             String word = tudien.get(j).getWord_target() + "\t"
                                     + tudien.get(j).getWord_type() + "\t"
@@ -234,7 +234,7 @@ public class Controller extends DictionaryManagement{
                 FileWriter fw = null;
                 try {
                     String string = "\n" + wordTarget + "\t" + wordType + "\t" + wordPronounce + "\t" + wordEplain;
-                    File file = new File("D:\\Tu dien\\tudien.txt");
+                    File file = new File("D:\\Tu_dien_HuyTo\\tudien.txt");
 
                     fw = new FileWriter(file.getAbsoluteFile(), true);
                     bw = new BufferedWriter(fw);
